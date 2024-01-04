@@ -1,0 +1,24 @@
+resources:
+  - name: db
+    template:
+      name: kubernetes-postgresql
+      version: v0.2.0
+  - name: wordpress
+    template:
+      name: kubernetes-containerservice
+      version: v0.2.0
+    attributes:
+      containers:
+        - image: gitea/gitea
+          ports:
+            - internal: 3000
+              external: 3000
+          envs:
+            - name: DB_HOST
+              value: ${res.db.connection}
+            - name: DB_PASSWD
+              value: ${res.db.password}
+            - name: DB_USER
+              value: ${res.db.username}
+            - name: DB_NAME
+              value: ${res.db.database}
