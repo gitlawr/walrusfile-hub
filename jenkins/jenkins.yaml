@@ -1,0 +1,12 @@
+resources:
+  - name: jenkins
+    type: containerservice
+    attributes: 
+      containers:
+        - image: jenkins/jenkins:lts-jdk17
+          ports:
+            - internal: 8080
+              external: 8080
+            - internal: 50000
+              external: 50000
+            

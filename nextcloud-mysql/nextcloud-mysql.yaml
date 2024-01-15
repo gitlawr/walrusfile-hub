@@ -1,0 +1,22 @@
+resources:
+  - name: db
+    type: mysql
+    attributes: {}
+  - name: nextcloud
+    type: containerservice
+    attributes:
+      containers:
+        - image: nextcloud:apache
+          ports:
+            - internal: 80
+              external: 80
+          envs:
+            - name: MYSQL_DATABASE
+              value: ${res.db.database}
+            - name: MYSQL_USER
+              value: ${res.db.username}
+            - name: MYSQL_PASSWORD
+              value: ${res.db.password}
+            - name: MYSQL_HOST
+              value: ${res.db.connection}
+              

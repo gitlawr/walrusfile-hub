@@ -1,0 +1,17 @@
+resources:
+  - name: nginx
+    type: containerservice
+    attributes: 
+      containers:
+        - image: nginx
+          ports:
+            - internal: 80
+              external: 80
+          files:
+            - path: /usr/share/nginx/html/index.html
+              content: |
+                <html>
+                  <h1>Hi</h1>
+                  </br>
+                  <h1>Welcome to Container Service.</h1>
+                </html>

@@ -1,0 +1,21 @@
+resources:
+  - name: postgresql
+    type: postgresql
+    attributes: 
+      seeding:
+        url:
+          location: https://raw.githubusercontent.com/seal-io/terraform-provider-byteset/main/byteset/testdata/postgres-lg.sql
+        type: url
+  - name: pgadmin
+    type: containerservice
+    attributes:
+      containers:
+        - image: dpage/pgadmin4
+          ports:
+            - internal: 80
+              external: 80
+          envs:
+            - name: PGADMIN_DEFAULT_EMAIL
+              value: your@email.com
+            - name: PGADMIN_DEFAULT_PASSWORD
+              value: changeit
