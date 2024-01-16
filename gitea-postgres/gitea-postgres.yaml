@@ -1,6 +1,7 @@
 resources:
   - name: db
     type: postgresql
+    attributes: {}
   - name: gitea
     type: containerservice
     attributes:
@@ -9,6 +10,7 @@ resources:
           ports:
             - internal: 3000
               external: 3000
+              schema: http
           envs:
             - name: DB_HOST
               value: ${res.db.connection}

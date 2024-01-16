@@ -7,3 +7,4 @@ resources:
           ports:
             - internal: 3000
               external: 3000
+              schema: http
