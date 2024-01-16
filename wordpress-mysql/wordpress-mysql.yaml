@@ -1,13 +1,9 @@
 resources:
   - name: mysql
-    template:
-      name: kubernetes-mysql
-      version: v0.1.2
+    type: mysql
     attributes: {}
   - name: wordpress
-    template:
-      name: kubernetes-containerservice
-      version: v0.1.3
+    type: containerservice
     attributes:
       containers:
         - image: wordpress

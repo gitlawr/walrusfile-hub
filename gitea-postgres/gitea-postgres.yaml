@@ -1,12 +1,8 @@
 resources:
   - name: db
-    template:
-      name: kubernetes-postgresql
-      version: v0.2.0
-  - name: wordpress
-    template:
-      name: kubernetes-containerservice
-      version: v0.2.0
+    type: postgresql
+  - name: gitea
+    type: containerservice
     attributes:
       containers:
         - image: gitea/gitea

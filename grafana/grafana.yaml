@@ -1,0 +1,9 @@
+resources:
+  - name: grafana
+    type: containerservice
+    attributes: 
+      containers:
+        - image: grafana/grafana:latest
+          ports:
+            - internal: 3000
+              external: 3000
