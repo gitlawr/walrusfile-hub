@@ -9,4 +9,3 @@ resources:
               external: 8080
             - internal: 50000
               external: 50000
-            

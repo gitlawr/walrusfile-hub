@@ -11,7 +11,5 @@ resources:
             - path: /usr/share/nginx/html/index.html
               content: |
                 <html>
-                  <h1>Hi</h1>
-                  </br>
-                  <h1>Welcome to Container Service.</h1>
+                  <h1>Welcome to Walrus!</h1>
                 </html>

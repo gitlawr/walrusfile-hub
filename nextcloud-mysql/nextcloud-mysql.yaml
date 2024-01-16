@@ -19,4 +19,3 @@ resources:
               value: ${res.db.password}
             - name: MYSQL_HOST
               value: ${res.db.connection}
-              
