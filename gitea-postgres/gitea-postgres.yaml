@@ -1,5 +1,5 @@
 resources:
-  - name: db
+  - name: gitea-db
     type: postgresql
     attributes: {}
   - name: gitea
@@ -13,10 +13,10 @@ resources:
               schema: http
           envs:
             - name: DB_HOST
-              value: ${res.db.connection}
+              value: ${res.gitea-db.connection}
             - name: DB_PASSWD
-              value: ${res.db.password}
+              value: ${res.gitea-db.password}
             - name: DB_USER
-              value: ${res.db.username}
+              value: ${res.gitea-db.username}
             - name: DB_NAME
-              value: ${res.db.database}
+              value: ${res.gitea-db.database}

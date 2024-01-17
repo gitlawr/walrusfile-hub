@@ -1,5 +1,5 @@
 resources:
-  - name: db
+  - name: nextcloud-db
     type: mysql
     attributes: {}
   - name: nextcloud
@@ -12,10 +12,10 @@ resources:
               external: 80
           envs:
             - name: MYSQL_DATABASE
-              value: ${res.db.database}
+              value: ${res.nextcloud-db.database}
             - name: MYSQL_USER
-              value: ${res.db.username}
+              value: ${res.nextcloud-db.username}
             - name: MYSQL_PASSWORD
-              value: ${res.db.password}
+              value: ${res.nextcloud-db.password}
             - name: MYSQL_HOST
-              value: ${res.db.connection}
+              value: ${res.nextcloud-db.connection}
