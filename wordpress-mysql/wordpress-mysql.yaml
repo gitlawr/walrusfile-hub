@@ -1,5 +1,5 @@
 resources:
-  - name: mysql
+  - name: wordpress-db
     type: mysql
     attributes: {}
   - name: wordpress
@@ -12,10 +12,10 @@ resources:
               external: 80
           envs:
             - name: WORDPRESS_DB_HOST
-              value: ${res.mysql.address}
+              value: ${res.wordpress-db.address}
             - name: WORDPRESS_DB_PASSWORD
-              value: ${res.mysql.password}
+              value: ${res.wordpress-db.password}
             - name: WORDPRESS_DB_USER
-              value: ${res.mysql.username}
+              value: ${res.wordpress-db.username}
             - name: WORDPRESS_DB_NAME
-              value: ${res.mysql.database}
+              value: ${res.wordpress-db.database}
