@@ -7,6 +7,7 @@ resources:
     attributes:
       containers:
         - image: gitea/gitea
+          profile: run
           ports:
             - internal: 3000
               external: 3000
