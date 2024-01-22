@@ -4,6 +4,7 @@ resources:
     attributes: 
       containers:
         - image: nginx
+          profile: run
           ports:
             - internal: 80
               external: 80

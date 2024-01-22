@@ -11,6 +11,7 @@ resources:
     attributes:
       containers:
         - image: dpage/pgadmin4
+          profile: run
           ports:
             - internal: 80
               external: 80

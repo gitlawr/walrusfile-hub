@@ -4,6 +4,7 @@ resources:
     attributes: 
       containers:
         - image: jenkins/jenkins:lts-jdk17
+          profile: run
           ports:
             - internal: 8080
               external: 8080

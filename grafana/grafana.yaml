@@ -4,6 +4,7 @@ resources:
     attributes: 
       containers:
         - image: grafana/grafana:latest
+          profile: run
           ports:
             - internal: 3000
               external: 3000
