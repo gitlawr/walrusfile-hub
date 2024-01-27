@@ -1,7 +1,6 @@
 resources:
   - name: wordpress-db
     type: mysql
-    attributes: {}
   - name: wordpress
     type: containerservice
     attributes:

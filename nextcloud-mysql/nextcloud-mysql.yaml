@@ -1,7 +1,6 @@
 resources:
   - name: nextcloud-db
     type: mysql
-    attributes: {}
   - name: nextcloud
     type: containerservice
     attributes:

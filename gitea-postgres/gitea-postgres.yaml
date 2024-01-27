@@ -1,7 +1,6 @@
 resources:
   - name: gitea-db
     type: postgresql
-    attributes: {}
   - name: gitea
     type: containerservice
     attributes:
